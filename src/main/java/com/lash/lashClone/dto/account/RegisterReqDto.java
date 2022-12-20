@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @Data
 public class RegisterReqDto {
 
-    @NotBlank(message= "아이디를 비워 둘 수 없습니다.",groups = ValidationGroups.NotBlankGroup.class )
+    @NotBlank(message= "아이디를 비워 둘 수 없습니다.", groups = ValidationGroups.NotBlankGroup.class )
     private String username;
 
     @NotBlank(message= "비밀번호를 비워 둘 수 없습니다.", groups = ValidationGroups.NotBlankGroup.class)

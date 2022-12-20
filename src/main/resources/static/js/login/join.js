@@ -36,11 +36,12 @@ joinButtons.onclick =() => {
         success: (response) => {
             console.log(response)
             location.replace("/account/login");
-            alert("회원가입 완료~!");
+            alert("회원가입이 완료 되었습니다.");
         },
         error: (error) => {
             console.log(error);
-            validationError(error.responseJSON.data)
+            // validationError(error.responseJSON.data)
+            validationCheck();
         }
     });
 }
@@ -111,4 +112,28 @@ function validationError(error) {
     });
 
     accountErrors.classList.remove("errors-invisible");
+}
+
+
+
+
+
+function validationCheck () {
+
+    let checkId = document.getElementById("check-id");
+    let checkPw = document.getElementById("check-pw");
+    let recheckPw = document.getElementById("re-check-pw");
+    let checkName = document.getElementById("check-name");
+    let checkMiddleNum = document.getElementById("check-middle-num");
+    let checkMiddleLast = document.getElementById("check-last-num");
+    let checkEmail = document.getElementById("check-email");
+    let checkAgree1 = document.getElementById("check-agree1");
+    let checkAgree2 = document.getElementById("check-agree2");
+
+    if(checkId.value == "") {
+        alert("아이디를 입력하세요");
+        checkId.focus();
+        return false;
+    }
+
 }

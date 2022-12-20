@@ -73,6 +73,6 @@ mybatis:
 
 file:
 #  path: /home/ubuntu/springboot/project/upload/
-  path: C:/TeamProjectLash2/TeamProjectLash2/upload/
+  path: C:/TeamProjectLash3/TeamProjectLash/upload/
 
 

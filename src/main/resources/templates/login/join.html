@@ -46,10 +46,11 @@
                                 <th scope="row">
                                     아이디 
                                     <img src="/image/images/lash_btn/ico_required.png">
+                                    <p class="id-error"></p>
                                 </th>
                                 <td>
-                                    <input type="text" class="input-username join-input">
-                                    <span class="error-username"></span>
+                                    <input type="text" class="input-username join-input" id="check-id">
+                                    <!-- <span class="error-username"></span> -->
                                     (영문소문자/숫자, 4~16자)
                                     <!-- 대문자/공백/특수문자가 포함되었거나, 숫자로 시작 또는 숫자로만 이루어진 아이디는 사용할 수 없습니다.  -->
                                 </td>
@@ -60,7 +61,7 @@
                                     <img src="/image/images/lash_btn/ico_required.png">
                                 </th>
                                 <td>
-                                    <input type="password" class="input-password join-input">
+                                    <input type="password" class="input-password join-input" id="check-pw">
                                     (영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8자~16자)
                                 </td>
                             </tr>
@@ -70,7 +71,7 @@
                                     <img src="/image/images/lash_btn/ico_required.png">
                                 </th>
                                 <td>
-                                    <input type="password" class="input-password-confirm">
+                                    <input type="password" class="input-password-confirm" id="re-check-pw">
                                     <span class="password-confirm-error"></span>
                                     <!-- 비밀번호가 일치하지 않습니다. -->
                                 </td>
@@ -82,7 +83,7 @@
                                     <img src="/image/images/lash_btn/ico_required.png ">
                                 </th>
                                 <td>
-                                    <input type="text" class="input-name join-input">
+                                    <input type="text" class="input-name join-input" id="check-name">
                                 </td>
                             </tr>
                             <tr>
@@ -96,9 +97,9 @@
                                         <option value="010">010</option>
                                     </select> -->
                                     −
-                                    <input class="input-phone join-input" type="text" maxlength="4">
+                                    <input class="input-phone join-input" type="text" maxlength="4" id="check-middle-num">
                                     −
-                                    <input class="input-phone join-input" type="text" maxlength="4">
+                                    <input class="input-phone join-input" type="text" maxlength="4" id="check-last-num">
                                 </td>
                             </tr>
                             <tr>
@@ -107,7 +108,7 @@
                                     <img src="/image/images/lash_btn/ico_required.png">
                                 </th>
                                 <td>
-                                    <input type="email" class="input-email join-input">
+                                    <input type="email" class="input-email join-input" id="check-email">
                                     <span class="email-error"></span>
                                     <!-- 유효한 이메일을 입력해 주세요. -->
                                 </td>
@@ -186,12 +187,12 @@
                     <ul class="check-list">
                         <li>
                             <span>[필수]이용약관 동의</span>
-                            <input class="agree_service_check0" type="checkbox">
+                            <input class="agree_service_check0" type="checkbox" id="check-agree1">
                             <label for="agree_service_check0">동의함</label>
                         </li>
                         <li>
                             <span>[필수]개인정보 수집 및 이용 동의</span>
-                            <input class="agree_service_check1" type="checkbox">
+                            <input class="agree_service_check1" type="checkbox" id="check-agree2">
                             <label for="agree_service_check1">동의함</label>
                         </li>
                         <li>
