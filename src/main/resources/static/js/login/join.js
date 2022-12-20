@@ -39,8 +39,8 @@ joinButtons.onclick =() => {
             alert("회원가입이 완료 되었습니다.");
         },
         error: (error) => {
-            console.log(error);
-            // validationError(error.responseJSON.data)
+            console.log("에러 : " + error);
+            validationError(error.responseJSON.data)
             validationCheck();
         }
     });
@@ -102,6 +102,7 @@ function validationError(error) {
     const accountErrorList = accountErrors.querySelector("ul");
 
     const errorValues = Object.values(error);
+    console.log("에러무엇? : ", errorValues);
 
     accountErrorList.innerHTML = "";
 
